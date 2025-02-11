@@ -1,7 +1,7 @@
-import { login } from '../api/login';
-import { signup } from '../api/signup';
+import { login, signup } from '@/entities/member';
 
-export default function LoginPage() {
+// TODO : 테스트를 위한 임시 폼으로, UI 별도 구현이 필요함.
+export function LoginForm() {
   return (
     <form>
       <label htmlFor="email">Email:</label>

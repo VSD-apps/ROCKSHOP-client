@@ -35,7 +35,10 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (!user && !request.nextUrl.pathname.startsWith('/login') && !request.nextUrl.pathname.startsWith('/auth')) {
+  // TODO : config 디렉토리에 분리하여 작성.
+  const PRIVATE_ROUTES: string[] = ['/my', '/order', '/payment'];
+
+  if (!user && PRIVATE_ROUTES.some(route => request.nextUrl.pathname.startsWith(route))) {
     // no user, potentially respond by redirecting the user to the login page
     const url = request.nextUrl.clone();
     url.pathname = '/auth/login';

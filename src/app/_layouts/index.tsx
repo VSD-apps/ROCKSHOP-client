@@ -26,7 +26,7 @@ export async function RootLayout({
 }>) {
   const supabase = await createClient();
 
-  console.log(await supabase.auth.getUser());
+  console.log(await supabase);
 
   return (
     <html lang="en">
