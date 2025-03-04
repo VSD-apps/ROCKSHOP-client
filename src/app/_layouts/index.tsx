@@ -1,6 +1,7 @@
 import '../styles';
 import type { Metadata } from 'next';
 import { createClient } from '../lib/supabase/server';
+import { ThemeProvider } from '../_providers/theme-provider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,11 +18,15 @@ export async function RootLayout({
   console.log(await supabase);
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
