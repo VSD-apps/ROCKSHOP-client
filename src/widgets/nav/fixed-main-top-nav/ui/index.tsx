@@ -1,6 +1,6 @@
 'use client';
 
-import Logo from '@/shared/ui/logo/ui';
+import Logo from '@/shared/ui/_custom/logo/ui';
 import { useEffect, useState } from 'react';
 import { HamburgerBtn } from './hanburger-btn';
 

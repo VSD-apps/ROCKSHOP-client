@@ -1,4 +1,4 @@
-import Logo from '@/shared/ui/logo/ui';
+import Logo from '@/shared/ui/_custom/logo/ui';
 import { HamburgerBtn } from '../../fixed-main-top-nav/ui/hanburger-btn';
 import { Menu } from './menu';
 import { SearchBtn } from './search-btn';
@@ -11,7 +11,7 @@ export function MainTopNav() {
           <Logo className="w-[96px] h-[24px] desktop:w-[136px] desktop:h-[34px]" />
           <SearchBtn />
         </div>
-        <div className="flex gap-5 hidden desktop:block">
+        <div className="hidden gap-5 desktop:block">
           <Menu />
         </div>
         <div className="flex gap-5 desktop:hidden">TODO : Mobile Menu</div>
