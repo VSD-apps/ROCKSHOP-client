@@ -1,10 +1,19 @@
-import { Button } from '@/shared/ui/button/ui';
+import { IconButton } from '@/shared/ui';
+import { cn } from '@/app/lib/shadcn/utils';
 import { Menu } from 'lucide-react';
 
-export function HamburgerBtn() {
+interface Props {
+  className?: string;
+}
+export function HamburgerBtn({ className }: Props) {
   return (
-    <Button variant="ghost" size="icon">
-      <Menu />
-    </Button>
+    <IconButton
+      className={cn('[&_svg]:size-5 desktop:[&_svg]:size-6', className)}
+      buttonProps={{
+        variant: 'ghost',
+        size: 'icon',
+      }}
+      icon={<Menu />}
+    />
   );
 }

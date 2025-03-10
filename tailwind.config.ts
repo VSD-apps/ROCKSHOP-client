@@ -1,3 +1,8 @@
+/*
+Reference
+- zIndex : https://mui.com/material-ui/customization/z-index/?srsltid=AfmBOorOrxrttn55m1-r5rD-hlXFTp0vIrtdewwVbBEvQPr5gN5TOqnq
+- color : https://ui.shadcn.com/docs/theming
+*/
 import type { Config } from 'tailwindcss';
 
 export default {
@@ -9,6 +14,17 @@ export default {
       desktop: '1280px',
     },
     extend: {
+      zIndex: {
+        lv1: '1000', // mobile stepper
+        lv2: '1010', // floating trigger
+        lv3: '1020', // floating element
+        lv4: '1030', // sub appbar, sub navigation
+        lv5: '1040', // appbar, navigation
+        lv6: '1050', // drawer
+        lv7: '1060', // modal
+        lv8: '1070', // snackbar
+        lv9: '1080', // Tooltip
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',

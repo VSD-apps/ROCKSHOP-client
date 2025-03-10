@@ -5,8 +5,8 @@ import { MainTopNav } from '@/widgets/nav/main-top-nav';
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative">
-      <FixedMainTopNav />
       <MainTopNav />
+      <FixedMainTopNav />
       <PageLayout>{children}</PageLayout>
     </div>
   );
