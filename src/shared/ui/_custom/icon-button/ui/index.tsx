@@ -11,7 +11,7 @@ interface Props {
 
 export function IconButton({ buttonProps, className, icon }: Props) {
   return (
-    <Button {...buttonProps} className={cn('rounded-full', className)}>
+    <Button {...buttonProps} className={cn(className)}>
       {icon}
     </Button>
   );

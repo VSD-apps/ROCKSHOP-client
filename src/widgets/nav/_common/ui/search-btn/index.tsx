@@ -14,7 +14,7 @@ export function SearchBtn({ className }: Props) {
       )}
     >
       <Search className="flex-shrink-0 size-5 text-gray-400" />
-      <p className="text-gray-400 text-sm">봄 맞이 한정판, 더클라임 티셔츠 어때요?</p>
+      <p className="w-full text-gray-400 text-sm hover:cursor-text">봄 맞이 한정판, 더클라임 티셔츠 어때요?</p>
     </div>
   );
 }
